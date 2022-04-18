@@ -18,6 +18,7 @@ export interface Token {
 export interface ConnectionOptions {
   token?: Token;
   signer?: Signer;
+  contract?: string;
   host?: string;
   network?: string;
 }
@@ -106,6 +107,7 @@ export interface RpcReceipt<T = any> {
 export interface Connection {
   host: string;
   signer: Signer;
+  contract: string;
   token: Token;
   network: string;
   list: () => Promise<TableMetadata[]>;
